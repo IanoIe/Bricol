@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
+
+:root{
+    --green:#0d9979;
+}
+
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+*{
+  font-family: 'Open Sans', sans-serif;
+  margin:0; padding:0;
+  box-sizing: border-box;
+  text-decoration: none;
+  transition: all .5s cubic-bezier(.37,1.14,.26,1.24);
+}
+
+
+html{
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+
+.heading{
+  text-align: center;
+  font-size: 4rem;
+  color:#555;
+  padding:3rem;
+  padding-top: 10rem;
+}
+
+.heading i{
+  color:var(--green);
+  font-size: 2rem;
+}
+
+
+header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background:#fff;
+  box-shadow: 0 .1rem .3rem rgba(0,0,0,.3);
+  position: fixed;
+  top:0; left:0;
+  z-index: 1000;
+  padding: 1rem 5rem;
+  width: 100%;
+}
+
+header .logo{
+  color:var(--green);
+  font-size: 3rem;
+}
+
+header .navbar ul{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+}
+
+header .navbar ul li{
+  margin:0 1rem;
+}
+
+header .navbar ul li a{
+  font-size: 3rem;
+  color:#666;
+}
+
+header .navbar ul li a:hover{
+  color:var(--green);
+}
+
+header .fa-bars{
+  font-size: 3rem;
+  color:#666;
+  cursor: pointer;
+  display: none;
+}
+
+
+.about .row{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.about .row .image{
+  flex:1 1 40rem;
+  padding:2rem;
+}
+
+.about .row .image img{
+  width: 100%;
+}
+
+.about .row .content{
+  flex:1 1 40rem;
+  padding:2rem;
+}
+
+.about .row .content h3{
+  font-size: 3rem;
+  color:var(--green);
+  text-transform: none;
+}
+
+.about .row .content p{
+  font-size: 1.5rem;
+  color:#666;
+  padding:1rem 0;
+  text-transform: none;
+}
+
+.about .box-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.about .box-container .box{
+  padding:2rem 1rem;
+  text-align: center;
+  border:.2rem solid var(--green);
+  flex:1 1 20rem;
+  margin:2rem;
+}
+
+.about .box-container .box i{
+  color:var(--green);
+  font-size: 4rem;
+}
+
+.about .box-container .box h3{
+  color:#333;
+  font-size: 2.5rem;
+  padding:1rem 0;
+}
+
+.about .box-container .box p{
+  color:#666;
+  font-size: 1.7rem;
+}
+
+
+/* testes */
+
+.about .row{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.about .row .image{
+  flex:1 1 40rem;
+  padding:2rem;
+}
+
+.about .row .image img{
+  width: 100%;
+}
+
+.about .row .content{
+  flex:1 1 40rem;
+  padding:2rem;
+}
+
+.about .row .content h3{
+  font-size: 3rem;
+  color:var(--green);
+  text-transform: none;
+}
+
+.about .row .content p{
+  font-size: 1.5rem;
+  color:#666;
+  padding:1rem 0;
+  text-transform: none;
+}
+
+.about .box-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.about .box-container .box{
+  padding:2rem 1rem;
+  text-align: center;
+  border:.2rem solid var(--green);
+  flex:1 1 20rem;
+  margin:2rem;
+}
+
+.about .box-container .box i{
+  color:var(--green);
+  font-size: 4rem;
+}
+
+.about .box-container .box h3{
+  color:#333;
+  font-size: 2.5rem;
+  padding:1rem 0;
+}
+
+.about .box-container .box p{
+  color:#666;
+  font-size: 1.7rem;
+}
+
+
+/*Rodapé*/
+footer{
+  padding: 30px;
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+  background: #3CB371;
+  position: relative;
+  width: 100%;
+}
+
+/* media queries  */
+
+@media (max-width:768px){
+
+  html{
+      font-size: 55%;
+  }
+
+  header .fa-bars{
+      display: block;
+  }
+
+  header .navbar{
+      position: fixed;
+      top:-100rem; left:0;
+      width: 100%;
+      border-top: .1rem solid #ccc;
+      opacity: 0;
+  }
+
+  header .navbar ul{
+      flex-flow: column;
+      padding:2rem 0;
+      background-color: #fff;
+  }
+
+  header .navbar ul li{
+      width: 100%;
+      text-align: center;
+      margin:1rem 0;
+  }
+
+  header .navbar ul li a{
+      font-size: 3rem;
+      display: block;
+  }
+
+
+
+  header .nav-toggle{
+      top:6rem; 
+      opacity: 1;
+  }
+
+}
