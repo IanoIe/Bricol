@@ -1,4 +1,11 @@
-
+body{
+    background:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url('../images/Home.PNG') no-repeat;
+    background-size: cover ;
+    font-family: sans-serif;
+    max-height: 1px;
+    overflow-y: hidden;
+    overflow-x: hidden
+}
 
 .form-box{
     width: 380px;
@@ -39,19 +46,6 @@
     transition: 0.5s;
 }
 
-.nature-icon{
-    margin: 30px auto;
-    text-align: center;
-}
-
-.nature-icon img{
-    width: 30px;
-    margin: 0 12px;
-    box-shadow: 0 0 20px 0 #7f7f7f3d;
-    cursor: auto;
-    border-radius: 505;
-    background: linear-gradient(to right,#97d5e7,#69d372);
-}
 
 .input-group {
     top: 180px;
@@ -94,10 +88,12 @@
 
 footer{
     padding: 10px;
-    right: 20px;
+    left: 0px;
+    bottom: 0;
     color: white;
     text-align: center;
     background: #3CB371;
-    position: relative;
+    position: fixed;
     width: 100%;
-}
+    text-align: center;
+  }

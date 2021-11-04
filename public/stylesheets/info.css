@@ -266,11 +266,21 @@ footer{
       display: block;
   }
 
-
-
   header .nav-toggle{
       top:6rem; 
       opacity: 1;
   }
 
+}
+
+footer{
+  padding: 10px;
+  left: 0px;
+  bottom: 0;
+  color: white;
+  text-align: center;
+  background: #3CB371;
+  position: fixed;
+  width: 100%;
+  text-align: center;
 }
