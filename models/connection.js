@@ -1,12 +1,12 @@
-const { Console } = require('console');
 var mysql = require('mysql');
 var util = require('util');
 
 
 var pool = mysql.createPool({
     connectionLimit: 20,
-    host: 'remotemysql.com',
-    user: 'bricol',
+    host: 'localhost',
+    user: 'root',
+    database: 'bricol',
     password: 'Mamae1986',
     database: 'bricol'
 });
