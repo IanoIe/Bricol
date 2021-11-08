@@ -1,6 +1,6 @@
 /**Registar utilizador */
 function registar(){
-    $.aja({
+    $.ajax({
         url: '/api/auth/register',
         method: 'post',
         data: {
