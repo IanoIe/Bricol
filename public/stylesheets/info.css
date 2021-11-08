@@ -218,17 +218,6 @@ header .fa-bars{
 }
 
 
-/*Rodapé*/
-footer{
-  padding: 30px;
-  color: white;
-  font-size: 2rem;
-  text-align: center;
-  background: #b3ab3c;
-  position: relative;
-  width: 100%;
-}
-
 /* media queries  */
 
 @media (max-width:768px){
@@ -273,14 +262,17 @@ footer{
 
 }
 
+
+/*Rodapé*/
 footer{
   padding: 10px;
   left: 0px;
   bottom: 0;
   color: white;
   text-align: center;
-  background: #3CB371;
+  background: #b3ab3c;
   position: fixed;
   width: 100%;
   text-align: center;
 }
+
