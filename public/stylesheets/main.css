@@ -56,6 +56,16 @@ header .navbar ul li a:hover{
   color:var(--green);
 }
 
+#map{
+  position: fixed;
+  margin: 0;
+  padding: 0;
+  top: 200;
+  left: 0px;
+  height: 100%;
+  width: 1000px;
+}
+
 
 footer{
     padding: 10px;
