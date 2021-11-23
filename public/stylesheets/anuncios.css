@@ -56,6 +56,28 @@ header .navbar ul li a:hover{
   color:var(--green);
 }
 
+#uploadImg {
+  position: absolute;
+  right: 50px;
+  margin-top: 200px;
+}
+
+.filter-btn{
+  position: absolute;
+  right: 10px;
+  border-top: 100px;
+  padding: 10px 30px;
+  cursor: pointer;
+  margin-top: 50px;
+  margin-left: 50%;
+  margin-right: 50%;
+  background: linear-gradient(to right,#97d5e7,#69d372);
+  border: 0;
+  outline: none;
+  border-radius: 30px;
+  color: #fff;
+}
+
 
 footer{
     padding: 10px;
