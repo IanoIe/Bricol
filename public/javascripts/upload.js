@@ -1,3 +1,10 @@
+var latImgUpload
+var lngImgUpload
+
+window.onload = function(){
+    conteudoImagem = document.getElementById("conteudoImagem")
+}
+
 /** Função que permite fazer upload da imagem, guardando-na no Imgbb */
 function uploadImg(){
     var file = document.getElementById('input_img');
