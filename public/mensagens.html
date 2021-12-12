@@ -4,12 +4,12 @@
         <meta charset="UTF-8">
         <title>Bricol | Página Principal</title>
         <link rel="icon" href="images/logo.PNG">
-        <link rel="stylesheet" href="stylesheets/anuncios.css">
+        <link rel="stylesheet" href="stylesheets/mensagens.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="javascripts/anuncios.js"></script>
+        <script src="javascripts/mensagem.js"></script>
     </head>
 
-    <body>
+    <body onload="carregarMensagens()">
         <header>
             <div class="logo"><img src="images/logo.PNG"></a></div>
             <nav class="navbar">
@@ -17,7 +17,12 @@
                 <li><a href="index.html" class="f90-logout-button">Logout</a></li>
               </ul>
             </nav>
-          </header>
+        </header>
+
+        <main>
+          <div id="mensagem"></div>
+        </main>
+        
     </body>
 
 

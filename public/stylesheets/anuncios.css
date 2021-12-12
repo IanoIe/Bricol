@@ -78,6 +78,33 @@ header .navbar ul li a:hover{
   color: #fff;
 }
 
+#anuncios{
+  position: fixed;
+  margin-top: 200px;
+  padding: 0;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+}
+
+
+.iconDetails {
+  margin-left:2%;
+  float:left; 
+  height:100px;
+  width:100px;    
+  } 
+  
+  .container2 {
+      width:100%;
+      height:auto;
+      padding:1%;
+  }
+  
+  h4 {
+      margin:0px;
+  }
+
 
 footer{
     padding: 10px;
