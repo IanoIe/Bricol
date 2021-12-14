@@ -10,11 +10,10 @@ function carregarMensagens() {
         method: 'get',
         success: function (resultado) {
             mensagemInf = resultado.data;
-            console.log(mensagemInf)
+            
             var mensagens = "<ul>";
             for (let index = 0; index < mensagemInf.length; index++) {
                 const element = mensagemInf[index];
-                console.log(element)
                 mensagens += "<li><a class='thumbnail' href='#'>"+
                 element.Nome.charAt(0)+"</a><div class='content'><h3>"+
                 element.Nome+"</h3><span class='preview'>"+

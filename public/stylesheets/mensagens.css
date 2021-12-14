@@ -120,22 +120,22 @@ ul li .content h3 {
   display: block;
   width: 100%;
   margin-bottom: 5px;
-  color: #808080;
+  color: #0f0f0f;
 }
 ul li .content .preview {
   display: block;
   width: 100%;
   max-width: 200px;
   margin-bottom: 5px;
-  color: #cccccc;
+  color: #0f0e0e;
   font-size: 12px;
 }
 ul li .content .meta {
-  color: #b3b3b3;
+  color: #131212;
   font-size: 12px;
 }
 ul li .content .meta a {
-  color: #999999;
+  color: #181717;
   text-decoration: none;
 }
 ul li .content .meta a:hover {

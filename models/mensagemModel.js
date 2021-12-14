@@ -10,7 +10,6 @@ module.exports.getMessgens = function (id, callback, next) {
         conn.query("select distinct(Nome), Mensagem, dataCriacao from Mensagens, Utilizador, Anuncio where Anuncio.Utilizador_idUtilizador = ? and idAnuncio = Anuncio_idAnuncio and Mensagens.Utilizador_idUtilizador = idUtilizador", id,
         function (err, result) {
             conn.release();
-            console.log(result)
             callback(false, {code: 200, status: "ok", data: result})
             
         })

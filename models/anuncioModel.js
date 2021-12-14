@@ -9,7 +9,6 @@ module.exports.getAnuncio = function(Titulo, callback){
         conn.query("select Titulo, Descricao, DatAnuncio, Url from Anuncio, Imagens where Anuncio_idAnuncio = idAnuncio and Utilizador_idUtilizador = ?", Titulo,
             function (err, result) {
                 conn.release();
-                console.log(result)
                 callback(false, {code: 200, status: "ok", data: result})
                 
             })
