@@ -76,6 +76,101 @@ header .navbar ul li a:hover{
   background-position: center;
 }
 
+/* Secção de Serviços */
+.heading{
+  text-align: center;
+  font-size: 4rem;
+  color:#555;
+  padding:1rem;
+  padding-top: 7rem;
+}
+
+.heading i{
+  color:var(--green);
+  font-size: 2rem;
+}
+
+.about .box-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.about .box-container .box{
+  padding: 2rem 1rem;
+  text-align: center;
+  border: .2rem solid var(--green);
+  flex: 1 1 20rem;
+  margin: 2rem;
+}
+
+.about .box-container .box h3{
+  color:#333;
+  font-size: 2.5rem;
+  padding:1rem 0;
+}
+
+.about .box-container .box p{
+  color:#666;
+  font-size: 1.7rem;
+}
+
+.service{
+  background: #f0f0f0;
+  min-height: 100vh;
+}
+
+.service .box-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.service .box-container .box{
+  flex: 1 1 25rem;
+  padding: 2rem 1rem;
+  text-align: center;
+  background: #fff;
+  border: .2rem solid var(--green);
+  margin: 2rem;
+  cursor: pointer;
+}
+
+.service .box-container .box i{
+  color: var(--green);
+  font-size: 4rem;
+  padding: 1rem 0;
+}
+
+.service .box-container .box h3{
+  color: #333;
+  font-size: 2rem;
+}
+
+.service .box-container .box p{
+  color: #666;
+  font-size: 1.5rem;
+  padding: 1rem 0;
+}
+
+.service .box-container .box a{
+  color: #333;
+  font-size: 1.7rem;
+}
+
+.service .box-container .a:hover{
+  color: var(--green);
+}
+
+.service .box-container .box:hover{
+  box-shadow: 0 .3rem .5rem rgba(0,0,0,.3);
+}
+
+/* Secção de rodapé */
 footer{
   padding: 10px;
   left: 0px;
@@ -125,6 +220,9 @@ footer{
       display: block;
   }
  
+  .fa-times{
+    transform: rotate(180deg);
+  }
 
   header .nav-toggle{
       top:6rem; 
@@ -137,6 +235,10 @@ footer{
 
   .home .content p{
       width: auto;
+  }
+
+  .service .box-container{
+    width: auto;
   }
 
   
