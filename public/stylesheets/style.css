@@ -4,11 +4,6 @@
     --green:#0d9979;
 }
 
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
-
 *{
   font-family: 'Open Sans', sans-serif;
   margin:0; padding:0;
@@ -16,6 +11,12 @@ body {
   text-decoration: none;
   transition: all .5s cubic-bezier(.37,1.14,.26,1.24);
 }
+
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
 
 *::selection{
   background:var(--green);
@@ -66,12 +67,11 @@ header .navbar ul li a:hover{
   color:var(--green);
 }
 
-
 .home{
   min-height: 100vh;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: left;
+  justify-content: left;
   background-size: cover;
   background-position: center;
 }
@@ -240,7 +240,5 @@ footer{
 
   .service .box-container{
     width: auto;
-  }
-
-  
+  }  
 }
