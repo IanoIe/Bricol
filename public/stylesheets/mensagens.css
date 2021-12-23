@@ -17,7 +17,6 @@ body {
   transition: all .5s cubic-bezier(.37,1.14,.26,1.24);
 }
 
-
 header{
   display: flex;
   align-items: center;
@@ -72,6 +71,7 @@ ul {
   margin: 0;
   border-top: 1px solid #f2f2f2;
 }
+
 ul li {
   position: relative;
   background: #ffffff;
@@ -80,18 +80,21 @@ ul li {
   padding: 10px;
   box-sizing: border-box;
 }
-ul li:before,
-ul li:after {
+
+ul li:before, ul li:after {
   display: block;
   content: '';
   clear: both;
 }
+
 ul li:hover .thumbnail {
   background: #bd6982;
 }
+
 ul li:nth-child(2n) {
   background: #f2f2f2;
 }
+
 ul li .thumbnail {
   display: inline-block;
   background: #bfbfbf;
@@ -110,18 +113,21 @@ ul li .thumbnail {
 ul li .thumbnail img {
   width: 100%;
 }
+
 ul li .content {
   display: inline-block;
   margin-left: 6px;
   vertical-align: top;
   line-height: 1;
 }
+
 ul li .content h3 {
   display: block;
   width: 100%;
   margin-bottom: 5px;
   color: #0f0f0f;
 }
+
 ul li .content .preview {
   display: block;
   width: 100%;
@@ -130,14 +136,17 @@ ul li .content .preview {
   color: #0f0e0e;
   font-size: 12px;
 }
+
 ul li .content .meta {
   color: #131212;
   font-size: 12px;
 }
+
 ul li .content .meta a {
   color: #181717;
   text-decoration: none;
 }
+
 ul li .content .meta a:hover {
   text-decoration: underline;
 }

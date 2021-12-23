@@ -67,15 +67,96 @@ header .navbar ul li a:hover{
   color:var(--green);
 }
 
+/*  Zona de Home >*/
+.btn {
+  height:3.5rem;
+  width:15rem;
+  background:none;
+  border: none;
+  outline:none;
+  color:var(--green);
+  font-size: 3rem;
+  margin:1rem 0;
+  cursor: pointer;
+  overflow: hidden;
+  z-index: 0;
+  position: relative;
+}
+.btn::before, .btn::after{
+  position: absolute;
+  content: '';
+  top:0; left:0;
+  height:100%;
+  width: 100%;
+  z-index: -1;
+  transition: all 0.5s cubic-bezier(.37,1.14,.26,1.24);
+}
+
+.btn:hover{
+  color:#fff;
+}
+
+
 .home{
   min-height: 100vh;
   display: flex;
-  align-items: left;
-  justify-content: left;
+  align-items: center;
+  justify-content: center;
+  background: url(../images/Welcome.png) no-repeat;
   background-size: cover;
   background-position: center;
 }
 
+.home .content{
+  text-align: center;
+  padding:1rem;
+
+}
+
+.home .content h1{
+  font-size: 7rem;
+  color:var(--green);
+}
+
+.home .content p{
+  font-size: 2rem;
+  color:rgb(8, 8, 8);
+  padding:1rem 0;
+  width: 70rem;
+}
+.infor .row{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.infor .row .image{
+  flex:1 1 40rem;
+  padding:2rem;
+}
+
+.infor .row .image img{
+  width: 100%;
+}
+
+.infor .row .content{
+  flex:1 1 40rem;
+  padding:2rem;
+}
+
+.infor .row .content h3{
+  font-size: 3rem;
+  color:var(--green);
+  text-transform: none;
+}
+
+.infor .row .content p{
+  font-size: 1.5rem;
+  color:#666;
+  padding:1rem 0;
+  text-transform: none;
+}
 
 /* Secção de Serviços */
 .heading{
@@ -91,14 +172,14 @@ header .navbar ul li a:hover{
   font-size: 2rem;
 }
 
-.about .box-container{
+.infor .box-container{
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
 }
 
-.about .box-container .box{
+.infor .box-container .box{
   padding: 2rem 1rem;
   text-align: center;
   border: .2rem solid var(--green);
@@ -106,13 +187,13 @@ header .navbar ul li a:hover{
   margin: 2rem;
 }
 
-.about .box-container .box h3{
+.infor .box-container .box h3{
   color:#333;
   font-size: 2.5rem;
   padding:1rem 0;
 }
 
-.about .box-container .box p{
+.infor .box-container .box p{
   color:#666;
   font-size: 1.7rem;
 }

@@ -19,8 +19,7 @@ function carregarAnuncios() {
                 anun += "<div><img src='"+element.Url+
                 "' class='iconDetails'/></div><div style='margin-left:60px;'><h4>"+"Titulo: "+
                 element.Titulo+"</h4><div style='font-size:1.6.6em'>"+"Discriçao: "+element.Descricao+
-                "</div><div style='font-size:1.0em'>"+"Data da criação: "+element.DatAnuncio.split("T").splice(0,1)+"</div></div>"
-                
+                "</div><div style='font-size:1.0em'>"+"Data da criação: "+element.DatAnuncio.split("T").splice(0,1)+"</div></div>"               
             }
             anuncios.innerHTML = anun
         }
@@ -60,7 +59,6 @@ function uploadFotoBD(idUtilizador, url){
             DataCriacao: " ",
             Localizacao: " ",
             url: url
-
         },
 
         success: function(status, result){
