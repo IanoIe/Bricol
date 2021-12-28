@@ -5,7 +5,7 @@ function entrar(){
         method: 'post',
         data: {
             Email:document.getElementById("email").value,
-            Senha:document.getElementById("password").value,
+            Password:document.getElementById("password").value,
         },
         success: function(result, status){
             console.log(result)

@@ -6,7 +6,7 @@ module.exports.login = function(obj, callback, next){
             conn.release();
             next(err);
         }
-        else conn.query("Select idUtilizador, Nome, Username, Email, Senha from Utilizador where Email=? and Senha=?", [obj.Email, obj.Senha], function(err, rows){
+        else conn.query("Select idUtilizador, Nome, Username, Email, Password from Utilizador where Email=? and Password=?", [obj.Email, obj.Password], function(err, rows){
             conn.release();
             if (!(rows.length === 0)) {
                 callback({code: 200, status: "Ok"}, rows);
