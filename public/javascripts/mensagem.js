@@ -22,6 +22,6 @@ function carregarMensagens() {
             }
             mensagem.innerHTML = mensagens+"</ul>"
         }
-    })
-    
+    })   
 }
+

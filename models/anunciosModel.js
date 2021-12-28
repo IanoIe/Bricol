@@ -1,4 +1,4 @@
-var mysql= require('./connection').pool
+var mysql = require('./connection').pool
 
 module.exports.getAnuncio = function(Titulo, callback){
     mysql.getConnection(function(err, conn){

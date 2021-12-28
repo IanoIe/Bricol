@@ -6,7 +6,8 @@ var logger = require('morgan');
 var loginRouter = require('./routes/loginRoutes');
 var registoRouter = require('./routes/registoRoutes');
 var mensagemRouter = require('./routes/mensagemRoutes');
-var anuncioRouter = require('./routes/anuncioRoutes')
+var myAnuncioRouter = require('./routes/myAnuncioRoutes')
+var anunciosRouter = require('./routes/anuciosRoutes');
 
 
 var app = express();
@@ -20,8 +21,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/api/auth', loginRouter);
 app.use('/api/auth', registoRouter);
 app.use('/api/mensagem', mensagemRouter);
-app.use('/api/anuncio', anuncioRouter);
-
+app.use('/api/myAnuncio', myAnuncioRouter);
+app.use('/api/anuncio', anunciosRouter);
 
 
 module.exports = app;

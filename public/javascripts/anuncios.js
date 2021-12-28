@@ -5,7 +5,7 @@ var fotos
 var anunciosInf
 
 function carregarAnuncios() {
-    url = '/api/anuncio/'
+    url = '/api/myAnuncio/'
     idUtilizador = localStorage.getItem("idUtilizador")
  
     $.ajax({
@@ -24,50 +24,4 @@ function carregarAnuncios() {
             anuncios.innerHTML = anun
         }
     })   
-}
-
-/** Função que permite fazer upload da imagem e guardar no Imgbb*/
-function uploadImg() {
-    var file = document.getElementById('input_img');
-    var form = new formatData();
-    form.append('image', file.files[0])
-
-    $.ajax(
-        {
-            'url': 'https://api.imgbb.com/1/upload?key=d54931f6597af555fc8dfdbb69742ceb',
-            'method': 'POST',
-            'timeout': 0,
-            'processData': false,
-            'mimeType': 'multipart/form-data',
-            'contentType': false,
-            'data': form
-        }
-    ).done(function(rep){
-        var jx = JSON.parse(rep)
-        uploadFotoBD(localStorage.getItem('idUtilizador'), jx.data.url)
-    })   
-}
-
-/** Função que permite enviar imagens a base de dados */
-function uploadFotoBD(idUtilizador, url){
-    $.ajax({
-        url: '/api/utilizador/'+idUtilizador+'/fotos/upload',
-        method: 'post',
-        data: {
-            Titulo: " ",
-            Discricao: " ",
-            DataCriacao: " ",
-            Localizacao: " ",
-            url: url
-        },
-
-        success: function(status, result){
-            console.log(result)
-            alert("Imagem guardada com sucesso")
-            location.reload()
-        },
-        error: function(status, result){
-            console.log(status)
-        }
-    })
 }

@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Bricol | Página Principal</title>
+        <title>Bricol | Página de Anuncios </title>
         <link rel="icon" href="images/logo.PNG">
         <link rel="stylesheet" href="stylesheets/anuncios.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -10,6 +10,7 @@
     </head>
 
     <body onload="carregarAnuncios()">
+
         <header>
             <div class="logo"><img src="images/logo.PNG"></a></div>
             <nav class="navbar">
@@ -21,43 +22,14 @@
           </header>
 
           <main>
-            <div id="anuncios">
-            </div>
-            <div id='uploadImg'>
-              <h1>Upload Imagens</h1>
-
-              <form>
-                <div>
-                  <label>Titulo: </label>
-                  <input>
-                </div>
-
-                <div>
-                  <label>Discrição: </label>
-                  <input>
-                </div>
-      
-              <div>
-                <label>Data de criação: </label>
-                <input>
-              </div>
-              
-              <div>
-                <label>Localização: </label>
-                <input>
-              </div>
-            </form>
-
-              <br>    
-              <input type='file' id='input_img'>
-              <br>
-              <button onclick='uploadImg()' id='botaoUmploadImg' type='button' class="filter-btn">Upload</button>
-            </div>
+            <div id="anuncios"></div>
           </main>
-    </body>
 
 
-    <footer>
-        <p>Bricol, Copyright &copy; 2021</p>
-    </footer>
+
+
+        <footer>
+            <p>Bricol, Copyright &copy; 2021</p>
+        </footer>
+    </body>  
 </html>

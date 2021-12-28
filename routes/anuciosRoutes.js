@@ -1,7 +1,7 @@
 const {signedCookie} = require('cookie-parser');
 var express = require('express');
 var router = express.Router();
-var anuncioModels = require("../models/anuncioModel");
+var anuncioModels = require("../models/anunciosModel");
 
 /* GEEET all Imagens */
 router.get('/:id', function(req, res, next) {
