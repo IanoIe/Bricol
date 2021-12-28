@@ -59,7 +59,7 @@ header .navbar ul li a:hover{
 #uploadImg {
   position: absolute;
   right: 50px;
-  margin-top: 200px;
+  
 }
 
 .filter-btn{
@@ -78,8 +78,8 @@ header .navbar ul li a:hover{
   color: #fff;
 }
 
-#anuncios{
-  position: fixed;
+#MyAnuncios{
+  position: relative;
   margin-top: 200px;
   padding: 0;
   left: 0px;
@@ -87,6 +87,10 @@ header .navbar ul li a:hover{
   width: 100%;
 }
 
+#MyAnuncios img {
+  width: 300px;
+  height: 250px;
+}
 
 .iconDetails {
   margin-left:5%;

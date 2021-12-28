@@ -6,7 +6,7 @@ var anuncioModels = require("../models/anunciosModel");
 /* GEEET all Imagens */
 router.get('/:id', function(req, res, next) {
     var id = req.params.id
-    anuncioModels.getAnuncio(id, function (status, result) {
+    anuncioModels.getTodosAnuncios(id, function (status, result) {
       res.status(200).send(result);
     });
   });

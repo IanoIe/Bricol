@@ -1,6 +1,6 @@
 var mysql = require('./connection').pool
 
-module.exports.getAnuncio = function(Titulo, callback){
+module.exports.getTodosAnuncios = function(Titulo, callback){
     mysql.getConnection(function(err, conn){
         if(err){
             callback(err, {code:500, status: "Erro de ligação a BD!"});

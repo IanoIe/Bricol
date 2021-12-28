@@ -5,7 +5,7 @@ var fotos
 var anunciosInf
 
 function carregarAnuncios() {
-    url = '/api/myAnuncio/'
+    url = '/api/anuncio/'
     idUtilizador = localStorage.getItem("idUtilizador")
  
     $.ajax({

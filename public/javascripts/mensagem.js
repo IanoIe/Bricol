@@ -14,7 +14,7 @@ function carregarMensagens() {
             var mensagens = "<ul>";
             for (let index = 0; index < mensagemInf.length; index++) {
                 const element = mensagemInf[index];
-                mensagens += "<li><a class='thumbnail' href='#'>"+
+                mensagens += "<li><a class='thumbnail' onclick='abrirModal("+element.idAnuncio+")'>"+
                 element.Nome.charAt(0)+"</a><div class='content'><h3>"+
                 element.Nome+"</h3><span class='preview'>"+
                 element.Mensagem+"</span><span class='meta'>"+
@@ -23,5 +23,10 @@ function carregarMensagens() {
             mensagem.innerHTML = mensagens+"</ul>"
         }
     })   
+}
+
+function abrirModal(id){
+    window.location = "#open-modal"
+    console.log(id)
 }
 
