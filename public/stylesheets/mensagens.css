@@ -166,6 +166,7 @@ ul li .content .meta a:hover {
   transition: all 0.3s;
 }
 
+
 .modal-window:target {
   visibility: visible;
   opacity: 1;
