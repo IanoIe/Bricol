@@ -13,15 +13,28 @@ function carregarMyAnuncios() {
         method: 'get',
         success: function (resultado) {
             anunciosInf = resultado.data;
+            var container = document.createElement('div')
+            container.className = 'container2';
+            container.style = "display: flex; flex-direction: column"
             var anun = "<div class='container2'>" 
             for (let index = 0; index < anunciosInf.length; index++) {
-                const element = anunciosInf[index];
-                anun += "<div><img src='"+element.Url+
-                "' class='iconDetails'/></div><div style='margin-left:60px;'><h4>"+"Titulo: "+
-                element.Titulo+"</h4><div style='font-size:1.6.6em'>"+"Discriçao: "+element.Descricao+
-                "</div><div style='font-size:1.0em'>"+"Data da criação: "+element.DatAnuncio.split("T").splice(0,1)+"</div></div>"               
+                var anuncio = anunciosInf[index];
+                containerAnuncio = document.createElement('div');
+                containerAnuncio.style = "display:inline-block; margin-bottom: 20px";
+                containerImg = document.createElement('img');
+                containerImg.src = anuncio.Url;
+                containerImg.className = 'iconDetails'
+                containerDescricao = document.createElement('div');
+                containerDescricao.innerHTML = "<h4>Titulo: "+anuncio.Titulo+"</h4>"+
+                                                "<div style='font-size:1.6.6em'>Discrição: "+anuncio.Descricao+"</div>"+
+                                                "<div style='font-size:1.0em'>Data da criação: "+anuncio.DatAnuncio.split("T")[0]+"</div>";
+                console.log(containerAnuncio)
+                containerAnuncio.appendChild(containerImg);
+                containerAnuncio.appendChild(containerDescricao);
+                container.appendChild(containerAnuncio);
             }
-            MyAnuncios.innerHTML = anun
+            //MyAnuncios.innerHTML = anun
+            MyAnuncios.appendChild(container);
         }
     })   
 }

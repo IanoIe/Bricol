@@ -6,7 +6,7 @@ module.exports.getTodosAnuncios = function(Titulo, callback){
             callback(err, {code:500, status: "Erro de ligação a BD!"});
             return
         }
-        conn.query("select Titulo, Descricao, DatAnuncio, Url from Anuncio, Imagens where Anuncio_idAnuncio = idAnuncio and Utilizador_idUtilizador != ?", Titulo,
+        conn.query("select Titulo, Descricao, DatAnuncio, Url, Longitude, Latitude from Anuncio, Imagens, Localizacao where Anuncio_idAnuncio = idAnuncio and Localizacao_idLocalizacao = idLocalizacao and Utilizador_idUtilizador != ?", Titulo,
             function (err, result) {
                 conn.release();
                 callback(false, {code: 200, status: "ok", data: result})
