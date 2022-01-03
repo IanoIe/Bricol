@@ -9,7 +9,8 @@
         <script src="javascripts/enviarMensagem.js"></script>
     </head>
 
-    <body>
+    <body onload="carregarUmAnuncio()">
+
         <header>
             <div class="logo"><img src="images/logo.PNG"></a></div>
             <nav class="navbar">
@@ -18,6 +19,21 @@
                 </ul>
             </nav>
         </header>
+
+        <main style="display: flex; flex-direction: row;">
+            <div id="UmAnuncio" style="margin-top: 200px;"></div>
+            <div id="form" style="margin-top: 200px; margin-left: 50px;">
+                <div> <label>Mensagem:</label> </div>
+                <div> <br><textarea type="text" cols="35" rows="8" id="mensagem"></textarea><br> </div>
+                <div> <button onclick="submeter()">Enviar</button> </div>               
+            </div>
+        </main>
+
+        
+
+        <footer>
+            <p>Bricol, Copyright &copy; 2021</p>
+        </footer>
 
     </body>
 </html>

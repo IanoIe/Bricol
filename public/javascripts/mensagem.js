@@ -21,12 +21,32 @@ function carregarMensagens() {
                 element.dataCriacao.split("T").splice(0,1)+"</span></div></li>" 
             }
             mensagem.innerHTML = mensagens+"</ul>"
+            
         }
     })   
 }
 
 function abrirModal(id){
     window.location = "#open-modal"
-    console.log(id)
+    localStorage.setItem("id", id);
+}
+
+function submeter(){
+    var mensagem = document.getElementById("mensagemSubmeter").value;
+    var idAnuncio = localStorage.getItem("id")
+    url = '/api/envMeng/guardar/'
+    $.ajax({
+        url: url + idAnuncio,
+        method: 'post',
+        data:{
+            mensagem: mensagem,
+            idUtilizador: localStorage.getItem("idUtilizador") 
+        },
+        success: function (resultado) {
+            if(resultado.code==200){
+                window.location='main.html';
+            }
+        }
+    })
 }
 

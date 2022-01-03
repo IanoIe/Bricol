@@ -7,7 +7,8 @@ var loginRouter = require('./routes/loginRoutes');
 var registoRouter = require('./routes/registoRoutes');
 var mensagemRouter = require('./routes/mensagemRoutes');
 var myAnuncioRouter = require('./routes/myAnuncioRoutes')
-var anunciosRouter = require('./routes/anuciosRoutes');
+var anunciosRouter = require('./routes/anunciosRoutes');
+var envMensRouter = require('./routes/enviarMensagemRoutes');
 
 
 var app = express();
@@ -23,6 +24,7 @@ app.use('/api/auth', registoRouter);
 app.use('/api/mensagem', mensagemRouter);
 app.use('/api/myAnuncio', myAnuncioRouter);
 app.use('/api/anuncio', anunciosRouter);
+app.use('/api/envMeng', envMensRouter)
 
 
 module.exports = app;

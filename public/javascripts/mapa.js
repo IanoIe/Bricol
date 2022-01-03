@@ -41,6 +41,7 @@ function carregarAnunciosMapa(mapa, latLng, distMax){
     method: 'get',
     success: function (resultado) {
         var anuncios = resultado.data;
+        console.log(anuncios)
         for(var anuncio of anuncios){
           var locAnuncio = [parseFloat(anuncio.Latitude), parseFloat(anuncio.Longitude)];
           anuncio.locAnuncio = locAnuncio;
@@ -78,7 +79,11 @@ function adicionarAnuncioMapa(mapa, anuncio, latlng){
     "<p>"+anuncio.DatAnuncio.split('T')[0]+"</p>"+
     "<p>"+anuncio.Descricao+"</p>"+
     "<p>"+(anuncio.Distancia/1000).toFixed(3)+" km</p>"+
-    "<a href='#'>Enviar mensagem</a>"
+    "<a href='#' onclick='abrirAnuncio("+anuncio.idAnuncio+")'>Enviar mensagem</a>"
   );
+}
 
+function abrirAnuncio(id){
+  localStorage.setItem("idAnuncio", parseInt(id));
+  window.location = "enviarMensagem.html";
 }
