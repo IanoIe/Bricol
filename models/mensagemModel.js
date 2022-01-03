@@ -7,7 +7,7 @@ module.exports.getMessgens = function (id, callback, next) {
             callback(err, { code: 500, status: "Erro de ligação a BD!"})
             return;
         }
-        conn.query("select distinct(Nome), Mensagem, dataCriacao, idAnuncio from Mensagens, Utilizador, Anuncio where Anuncio.Utilizador_idUtilizador = ? and idAnuncio = Anuncio_idAnuncio and Mensagens.Utilizador_idUtilizador = idUtilizador", id,
+        conn.query("select distinct(Nome), Mensagem, dataCriacao, idAnuncio from Mensagens, Utilizador, Anuncio where Anuncio.Utilizador_idUtilizador = ? and idAnuncio = Anuncio_idAnuncio and Mensagens.Utilizador_idUtilizador = idUtilizador order by idAnuncio", id,
         function (err, result) {
             conn.release();
             callback(false, {code: 200, status: "ok", data: result})
