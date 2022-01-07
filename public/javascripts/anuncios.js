@@ -17,9 +17,9 @@ function carregarAnuncios() {
             for (let index = 0; index < anunciosInf.length; index++) {
                 const element = anunciosInf[index];
                 anun += "<div><img src='"+element.Url+
-                "' class='iconDetails'/></div><div style='margin-left:60px;'><h4>"+"Titulo: "+
-                element.Titulo+"</h4><div style='font-size:1.6.6em'>"+"Discriçao: "+element.Descricao+
-                "</div><div style='font-size:1.0em'>"+"Data da criação: "+element.DatAnuncio.split("T").splice(0,1)+"</div></div>"               
+                "' class='iconDetails'/></div><div style='margin-left:0px;'><h3>"+"Titulo: "+
+                element.Titulo+"</h3><div style='font-size:1.6.6em'><h4>"+"Discriçao: "+element.Descricao+
+                "</h5></div><div style='font-size:1.0em'><h4>"+"Data da criação: "+element.DatAnuncio.split("T").splice(0,1)+"</h4></div></br></br></div>"               
             }
             anuncios.innerHTML = anun
         }

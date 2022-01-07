@@ -1,8 +1,14 @@
-var latImgUpload
-var lngImgUpload
+var tituloAnunc
+var descricaoAnunc
+var datCraicaoAnunc
+
+var latImgUploadAnun
+var lngImgUploadAnunc
+
 
 window.onload = function(){
     conteudoImagem = document.getElementById("conteudoImagem")
+    tituloAnunc = document.getElementById()
 }
 
 /** Função que permite fazer upload da imagem, guardando-na no Imgbb */

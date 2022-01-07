@@ -22,28 +22,29 @@
 
           <main style="display: flex; flex-direction: row">
             <div id="MyAnuncios"></div>
-            <div id='uploadImg' style="margin-top: 200px">
-              <h1>Upload Imagens</h1>
 
-              <form>
-                <div>
-                  <label>Titulo: </label>
-                  <input>
+            <div id='uploadImg' style="margin-top: 200px">
+              <h1>Upload Imagens</h1><br>
+
+              <div class="select">
+                  <label for="titulo">Titulo: </label>
+                  <input type="text" id="ftitulo" title="ftitulo"><br><br>
                 </div>
 
-                <div>
-                  <label>Discrição: </label>
-                  <input>
+                <div class="selct">
+                  <label for="descricao">Descrição: </label>
+                  <input type="text" id="ftext" text="ftext"><br><br>
                 </div>
       
-              <div>
-                <label>Data de criação: </label>
-                <input>
+              <div class="select">
+                <label for="data">Data de criação: </label>
+                <input type="date" id="dia" name="dia"><br><br>
               </div>
               
-              <div>
-                <label>Localização: </label>
-                <input>
+              <div class="select">
+                <label for="localizacao">Coordenadas: </label>
+                <input type="text" id="latUpload" name="latUpload">
+                <input type="text" id="lngUpload" name="lnUpload">
               </div>
             </form>
 
