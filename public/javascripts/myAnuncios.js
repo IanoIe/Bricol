@@ -23,11 +23,11 @@ function carregarMyAnuncios() {
                 containerAnuncio.style = "display:inline-block; margin-bottom: 20px";
                 containerImg = document.createElement('img');
                 containerImg.src = anuncio.Url;
-                containerImg.className = 'iconDetails'
+                containerImg.className = 'iconDetails'+'</div>'
                 containerDescricao = document.createElement('div');
-                containerDescricao.innerHTML = "<h4>Titulo: "+anuncio.Titulo+"</h4>"+
+                containerDescricao.innerHTML = "<div><h4>Titulo: "+anuncio.Titulo+"</h4>"+
                                                 "<div style='font-size:1.6.6em'>Discrição: "+anuncio.Descricao+"</div>"+
-                                                "<div style='font-size:1.0em'>Data da criação: "+anuncio.DatAnuncio.split("T")[0]+"</div>";
+                                                "<div style='font-size:1.0em'>Data da criação: "+anuncio.DatAnuncio.split("T")[0]+"</div></div>";
                 console.log(containerAnuncio)
                 containerAnuncio.appendChild(containerImg);
                 containerAnuncio.appendChild(containerDescricao);
