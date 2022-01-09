@@ -76,6 +76,7 @@ function adicionarAnuncioMapa(mapa, anuncio, latlng){
     
   marker.bindPopup(
     "<h3>"+anuncio.Titulo+"</h3>"+
+    "<img src="+anuncio.Url+" width='200' height='200'/>"+
     "<p>"+anuncio.DatAnuncio.split('T')[0]+"</p>"+
     "<p>"+anuncio.Descricao+"</p>"+
     "<p>"+(anuncio.Distancia/1000).toFixed(3)+" km</p>"+
