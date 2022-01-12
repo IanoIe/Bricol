@@ -6,7 +6,6 @@ var pool = mysql.createPool({
     connectionLimit: 20,
     host: 'remotemysql.com',
     user: '4RaaJ3OSXG',
-    database: '4RaaJ3OSXG',
     password: 'x2QkYBmS1m',
     database: '4RaaJ3OSXG'
 });
