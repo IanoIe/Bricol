@@ -273,9 +273,7 @@ footer{
       font-size: 55%;
   }
 
-  header .fa-bars{
-      display: block;
-  }
+
 
   header .navbar{
       position: fixed;
