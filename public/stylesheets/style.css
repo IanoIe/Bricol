@@ -124,34 +124,34 @@ header .navbar ul li a:hover{
   padding:1rem 0;
   width: 70rem;
 }
-.infor .row{
+.about .row{
   display: flex;
   align-items: center;
   justify-content: space-around;
   flex-wrap: wrap;
 }
 
-.infor .row .image{
+.about .row .image{
   flex:1 1 40rem;
   padding:2rem;
 }
 
-.infor .row .image img{
+.about .row .image img{
   width: 100%;
 }
 
-.infor .row .content{
+.about .row .content{
   flex:1 1 40rem;
   padding:2rem;
 }
 
-.infor .row .content h3{
+.about .row .content h3{
   font-size: 3rem;
   color:var(--green);
   text-transform: none;
 }
 
-.infor .row .content p{
+.about .row .content p{
   font-size: 1.5rem;
   color:#666;
   padding:1rem 0;
@@ -172,14 +172,14 @@ header .navbar ul li a:hover{
   font-size: 2rem;
 }
 
-.infor .box-container{
+.about .box-container{
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
 }
 
-.infor .box-container .box{
+.about .box-container .box{
   padding: 2rem 1rem;
   text-align: center;
   border: .2rem solid var(--green);
@@ -187,13 +187,13 @@ header .navbar ul li a:hover{
   margin: 2rem;
 }
 
-.infor .box-container .box h3{
+.about .box-container .box h3{
   color:#333;
   font-size: 2.5rem;
   padding:1rem 0;
 }
 
-.infor .box-container .box p{
+.about .box-container .box p{
   color:#666;
   font-size: 1.7rem;
 }
