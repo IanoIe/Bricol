@@ -4,10 +4,6 @@
     --green:#0d9979;
 }
 
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
 
 *{
   font-family: 'Open Sans', sans-serif;
@@ -16,27 +12,20 @@ body {
   text-decoration: none;
   transition: all .5s cubic-bezier(.37,1.14,.26,1.24);
 }
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
 
+*::selection{
+  background:var(--green);
+  color: #fff;
+}
 
 html{
   font-size: 62.5%;
   overflow-x: hidden;
 }
-
-
-.heading{
-  text-align: center;
-  font-size: 4rem;
-  color:#555;
-  padding:3rem;
-  padding-top: 10rem;
-}
-
-.heading i{
-  color:var(--green);
-  font-size: 2rem;
-}
-
 
 header{
   display: flex;
@@ -62,7 +51,6 @@ header .navbar ul{
   justify-content: space-between;
   list-style: none;
 }
-
 header .navbar ul li{
   margin:0 1rem;
 }
@@ -71,17 +59,23 @@ header .navbar ul li a{
   font-size: 3rem;
   color:#666;
 }
-
 header .navbar ul li a:hover{
   color:var(--green);
 }
 
-header .fa-bars{
-  font-size: 3rem;
-  color:#666;
-  cursor: pointer;
-  display: none;
+.heading{
+  text-align: center;
+  font-size: 4rem;
+  color:#555;
+  padding:1rem;
+  padding-top: 7rem;
 }
+
+.heading i{
+  color:var(--green);
+  font-size: 2rem;
+}
+
 
 
 .about .row{
@@ -110,43 +104,11 @@ header .fa-bars{
   color:var(--green);
   text-transform: none;
 }
-
 .about .row .content p{
   font-size: 1.5rem;
   color:#666;
   padding:1rem 0;
   text-transform: none;
-}
-
-.about .box-container{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.about .box-container .box{
-  padding:2rem 1rem;
-  text-align: center;
-  border:.2rem solid var(--green);
-  flex:1 1 20rem;
-  margin:2rem;
-}
-
-.about .box-container .box i{
-  color:var(--green);
-  font-size: 4rem;
-}
-
-.about .box-container .box h3{
-  color:#333;
-  font-size: 2.5rem;
-  padding:1rem 0;
-}
-
-.about .box-container .box p{
-  color:#666;
-  font-size: 1.7rem;
 }
 
 
@@ -160,27 +122,12 @@ header .fa-bars{
 }
 
 
-.about .box-container .box i{
-  color:var(--green);
-  font-size: 4rem;
-}
-
-.about .box-container .box h3{
-  color:#333;
-  font-size: 2.5rem;
-  padding:1rem 0;
-}
-
 /* media queries  */
 
 @media (max-width:768px){
 
   html{
       font-size: 55%;
-  }
-
-  header .fa-bars{
-      display: block;
   }
 
   header .navbar{
