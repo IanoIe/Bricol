@@ -90,11 +90,15 @@ header .fa-bars{
   justify-content: space-around;
   flex-wrap: wrap;
 }
+.about .row .image img{
+  width: 100%;
+}
 
 .about .row .image{
   flex:1 1 40rem;
   padding: 2rem;
 }
+
 
 .about .row .content{
   flex:1 1 40rem;
@@ -153,10 +157,6 @@ header .fa-bars{
   align-items: center;
   justify-content: space-around;
   flex-wrap: wrap;
-}
-
-.about .row .image img{
-  width: 100%;
 }
 
 
