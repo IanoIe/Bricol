@@ -96,10 +96,6 @@ header .fa-bars{
   padding: 2rem;
 }
 
-.about .row .image img{
-  width: 100%;
-}
-
 .about .row .content{
   flex:1 1 40rem;
   padding:2rem;
