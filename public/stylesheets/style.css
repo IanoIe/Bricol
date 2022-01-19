@@ -97,7 +97,7 @@ header .navbar ul li a:hover{
   display: flex;
   align-items: center;
   justify-content: center;
-  background: url(../images/welcome.PNG) no-repeat;
+  background: url(../images/Welcome.PNG) no-repeat;
   background-size: cover;
   background-position: center;
 }
