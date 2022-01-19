@@ -17,10 +17,6 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
-*::selection{
-  background:var(--green);
-  color: #fff;
-}
 
 html{
   font-size: 62.5%;
@@ -68,7 +64,7 @@ header .navbar ul li a:hover{
   font-size: 4rem;
   color:#555;
   padding:1rem;
-  padding-top: 7rem;
+  padding-top: 10rem;
 }
 
 .heading i{
