@@ -17,18 +17,13 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
-
-*::selection{
-  background:var(--green);
-  color:#fff;
-}
-
 html{
   font-size: 62.5%;
   overflow-x: hidden;
 }
 
 
+/*Cabeçalho*/
 header{
   display: flex;
   align-items: center;
@@ -102,7 +97,7 @@ header .navbar ul li a:hover{
   display: flex;
   align-items: center;
   justify-content: center;
-  background: url(../images/welcome.png) no-repeat;
+  background: url(../images/welcome.PNG) no-repeat;
   background-size: cover;
   background-position: center;
 }
@@ -172,32 +167,6 @@ header .navbar ul li a:hover{
   font-size: 2rem;
 }
 
-.about .box-container{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.about .box-container .box{
-  padding: 2rem 1rem;
-  text-align: center;
-  border: .2rem solid var(--green);
-  flex: 1 1 20rem;
-  margin: 2rem;
-}
-
-.about .box-container .box h3{
-  color:#333;
-  font-size: 2.5rem;
-  padding:1rem 0;
-}
-
-.about .box-container .box p{
-  color:#666;
-  font-size: 1.7rem;
-}
-
 .service{
   background: #f0f0f0;
   min-height: 100vh;
@@ -241,7 +210,7 @@ header .navbar ul li a:hover{
 
 .service .box-container .box a{
   color: #333;
-  font-size: 1.7rem;
+  font-size: 2.7rem;
 }
 
 .service .box-container .a:hover{
@@ -265,59 +234,4 @@ footer{
   text-align: center;
 }
 
-/* media queries  */
 
-@media (max-width:768px){
-
-  html{
-      font-size: 55%;
-  }
-
-
-
-  header .navbar{
-      position: fixed;
-      top:-100rem; left:0;
-      width: 100%;
-      border-top: .1rem solid #ccc;
-      opacity: 0;
-  }
-
-  header .navbar ul{
-      flex-flow: column;
-      padding:2rem 0;
-      background-color: #fff;
-  }
-
-  header .navbar ul li{
-      width: 100%;
-      text-align: center;
-      margin:1rem 0;
-  }
-
-  header .navbar ul li a{
-      font-size: 3rem;
-      display: block;
-  }
- 
-  .fa-times{
-    transform: rotate(180deg);
-  }
-
-  header .nav-toggle{
-      top:6rem; 
-      opacity: 1;
-  }
-
-  .home .content h1{
-      font-size: 5rem;
-  }
-
-  .home .content p{
-      width: auto;
-  }
-
-  .service .box-container{
-    width: auto;
-  }  
-}
