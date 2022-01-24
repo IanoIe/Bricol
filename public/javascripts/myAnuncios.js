@@ -27,8 +27,9 @@ function carregarMyAnuncios() {
                 containerDescricao = document.createElement('div');
                 containerDescricao.innerHTML = "<div><h4>Titulo: "+anuncio.Titulo+"</h4>"+
                                                 "<div style='font-size:1.6.6em'>Discrição: "+anuncio.Descricao+"</div>"+
-                                                "<div style='font-size:1.0em'>Data da criação: "+anuncio.DatAnuncio.split("T")[0]+"</div></div>";
-                console.log(containerAnuncio)
+                                                "<div style='font-size:1.0em'>Data da criação: "+anuncio.DatAnuncio.split("T")[0]+"</div>"+
+                                                "<button onclick='removerAnuncio("+anuncio.idAnuncio+")'>Apagar Anúncio</button>"+"</div>";
+                console.log(anuncio)
                 containerAnuncio.appendChild(containerImg);
                 containerAnuncio.appendChild(containerDescricao);
                 container.appendChild(containerAnuncio);
@@ -112,14 +113,41 @@ function uploadAnuncio(idUtilizador, url){
                 success: function(status, result){
                     console.log(result)
                     alert("Imagem guardada com sucesso")
+                    window.location.reload();
                 },
                 error: function(status, result){
                     console.log(status)
                 }
             })
-            
         })   
-    
-        
     })   
+}
+
+/*Apagar Anuncio*/
+function removerAnuncio(id){
+    console.log(id)
+    $.ajax({
+        url: '/api/myAnuncio/apagarInfo/'+id,
+        method: 'delete',
+        success: function (resultado) {
+            console.log(resultado)
+        }
+    }).done(function(rep){
+        $.ajax({
+            url: '/api/myAnuncio/apagarMensagens/'+id,
+            method: 'delete',
+            success: function (resultado) {
+                console.log(resultado)
+            }
+        }).done(function(rep){
+            $.ajax({
+                url: '/api/myAnuncio/apagar/'+id,
+                method: 'delete',
+                success: function (resultado) {
+                    console.log(resultado)
+                    window.location.reload();
+                }
+            })
+        });
+    });
 }

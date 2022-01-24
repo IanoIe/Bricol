@@ -1,5 +1,6 @@
 const {signedCookie} = require('cookie-parser');
 var express = require('express');
+const { route } = require('express/lib/application');
 var router = express.Router();
 var anuncioModels = require("../models/myAnuncioModel");
 
@@ -49,6 +50,27 @@ router.post('/guardar/Imagem', function(req, res, netx){
     }
   })
 })
+
+router.delete('/apagar/:id', function (req, res, next) {
+   var id = req.params.id 
+   anuncioModels.deleteAnuncio(id, function (status, result) { 
+     res.send(result) 
+      
+   });
+  });
+router.delete('/apagarInfo/:id', function (req, res, next) {
+    var id = req.params.id 
+    anuncioModels.deleteInfo(id, function (status, result) {
+      res.send(result)   
+    });
+   });
+router.delete('/apagarMensagens/:id', function (req, res, next) {
+    var id = req.params.id 
+    anuncioModels.deleteMensagens(id, function (status, result) {
+      res.send(result)   
+  
+    });
+   });
 
 
 module.exports = router;

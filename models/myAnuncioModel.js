@@ -6,7 +6,7 @@ module.exports.getAnuncio = function(Titulo, callback){
             callback(err, {code:500, status: "Erro de ligação a BD!"});
             return
         }
-        conn.query("select Titulo, Descricao, DatAnuncio, Url from Anuncio, Imagens where Anuncio_idAnuncio = idAnuncio and Utilizador_idUtilizador = ?", Titulo,
+        conn.query("select idAnuncio, Titulo, Descricao, DatAnuncio, Url from Anuncio, Imagens where Anuncio_idAnuncio = idAnuncio and Utilizador_idUtilizador = ?", Titulo,
             function (err, result) {
                 conn.release();
                 callback(false, {code: 200, status: "ok", data: result})
@@ -14,6 +14,51 @@ module.exports.getAnuncio = function(Titulo, callback){
             })
     })  
 }
+
+module.exports.deleteInfo = function(id, callback){
+    mysql.getConnection(function(err, conn){
+        if(err){
+            callback(err, {code:500, status: "Erro de ligação a BD!"});
+            return
+        }
+        conn.query("delete from Imagens where Anuncio_idAnuncio = ?", id,
+            function (err, result) {
+                conn.release();
+                callback(false, {code: 200, status: "ok", data: result})
+                
+            })
+    }) 
+}
+module.exports.deleteMensagens = function(id, callback){
+    mysql.getConnection(function(err, conn){
+        if(err){
+            callback(err, {code:500, status: "Erro de ligação a BD!"});
+            return
+        }
+        conn.query("delete from Mensagens where Anuncio_idAnuncio = ?", id,
+            function (err, result) {
+                conn.release();
+                callback(false, {code: 200, status: "ok", data: result})
+                
+            })
+    }) 
+}
+
+module.exports.deleteAnuncio = function(id, callback){
+    mysql.getConnection(function(err, conn){
+        if(err){
+            callback(err, {code:500, status: "Erro de ligação a BD!"});
+            return
+        }
+        conn.query("delete from Anuncio where idAnuncio = ?", id,
+            function (err, result) {
+                conn.release();
+                callback(false, {code: 200, status: "ok", data: result})
+                
+            })
+    }) 
+}
+
 
 
 module.exports.uploadLocalizacao = function (data, callback){
