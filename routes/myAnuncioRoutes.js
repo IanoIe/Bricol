@@ -13,7 +13,6 @@ router.get('/:id', function(req, res, next) {
   });
 
 router.post('/guardar/Localizacao', function(req, res, next){
-  
   anuncioModels.uploadLocalizacao(req.body, function(status, result){
         if(result.code==200){
             res.send(result);
@@ -55,22 +54,23 @@ router.delete('/apagar/:id', function (req, res, next) {
    var id = req.params.id 
    anuncioModels.deleteAnuncio(id, function (status, result) { 
      res.send(result) 
-      
    });
-  });
+});
+
+
 router.delete('/apagarInfo/:id', function (req, res, next) {
     var id = req.params.id 
     anuncioModels.deleteInfo(id, function (status, result) {
       res.send(result)   
     });
-   });
+});
+
 router.delete('/apagarMensagens/:id', function (req, res, next) {
     var id = req.params.id 
     anuncioModels.deleteMensagens(id, function (status, result) {
       res.send(result)   
-  
     });
-   });
+});
 
 
 module.exports = router;
