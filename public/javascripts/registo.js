@@ -7,7 +7,7 @@ function registar(){
             Nome:document.getElementById("nome").value,
             Username:document.getElementById("username").value,
             Email:document.getElementById("email").value,
-            Senha:document.getElementById("senha").value,
+            Password:document.getElementById("pass").value,
         },
         success: function(result, status){
             console.log('Success')
