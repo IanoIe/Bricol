@@ -3,7 +3,6 @@ var routes = [];
 
 
 /** Função carregar o mapa */
-
 function carregarMapa(idElement){
     
     var map = L.map('map').setView([28.3949, 84.1240], 8);
@@ -15,11 +14,10 @@ function carregarMapa(idElement){
 
     var lc = L.control.locate().addTo(map);
     lc.start();
-    
     if(navigator.geolocation){
       navigator.geolocation.getCurrentPosition(function(position){
         var locUtilizador = [position.coords.latitude, position.coords.longitude];
-        carregarAnunciosMapa(map, locUtilizador, 15000); /** distancia maxima 45000metros */
+        carregarAnunciosMapa(map, locUtilizador, 25000); /** distancia maxima 25000metros */
       });
     }
 }

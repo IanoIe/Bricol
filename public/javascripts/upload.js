@@ -16,7 +16,6 @@ function uploadImg(){
     var file = document.getElementById('input_img');
     var form = new FormData();
     form.append('image',file.files[0])
-
     $.ajax(
         {
             'url': 'https://api.imgbb.com/1/upload?key=d54931f6597af555fc8dfdbb69742ceb',
