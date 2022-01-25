@@ -3,7 +3,7 @@ var express = require('express');
 var router = express.Router();
 var imagModels = require("../models/imagemModel");
 
-/* GEEET all Imagens */
+/* Get all Imagens */
 router.get('/', function (req, res, next){
     console.log(req.query)
     imagModels.getImages(req.query, function (status, result) {

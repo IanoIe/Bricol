@@ -4,7 +4,7 @@ var express = require('express');
 var router = express.Router();
 var envMenModels = require("../models/enviarMensagemModel");
 
-/* GEEET all Imagens */
+/*  */
 router.get('/:id', function (req, res, next){
     var id = req.params.id
     envMenModels.getEnviarMensagem(id, function (status, result) {
@@ -12,7 +12,6 @@ router.get('/:id', function (req, res, next){
             console.log("eeeeeeeeeeeeeeeeeeeee");
             res.send(result);
         }
-            
         else {
             res.statusMessage = status.status;
             res.status(status.code).send(result);
