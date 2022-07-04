@@ -25,7 +25,7 @@ module.exports.guardarMensagem = function(data, callback){
             callback(err, {code:500, status: "Erro de ligação a BD!"});
             return
         }
-        conn.query("insert into Mensagens (Mensagem, dataCriacao, Utilizador_idUtilizador, Anuncio_idAnuncio) values (?,?,?,?)", data,
+        conn.query("insert into Mensagens (Mensagem, dataCriacao, Remetente_idUtilizador, Utilizador_idUtilizador, Anuncio_idAnuncio) values (?,?,?,?,?)", data,
             function (err, result) {
                 if(err){
                     console.log(err)

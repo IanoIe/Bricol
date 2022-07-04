@@ -36,6 +36,13 @@
           </header>
 
           <main>
+            <div id="searchBar">
+              <button type="button" onclick="localizacaoAtual()">Localização atual</button>
+              <label for="descricao">Selecionar outra localização: </label>
+              <input type="text" id="localizacao" text="localizacao" onkeyup="geolocalizacao(event)">
+              <dir id="resultados"></dir>
+            </div>
+            
             <div id="map">
               <script src="javascripts/leaflet-routing-machine.js"></script>
               <script src="javascripts/mapa.js"></script>

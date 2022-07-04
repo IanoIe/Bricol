@@ -58,7 +58,13 @@ header .navbar ul li a:hover{
 
 #uploadImg {
   position: absolute;
-  right: 50px; 
+  right: 150px;
+}
+  
+  #map {
+  z-index: 0;
+  margin-top: 20px;
+  height: 200px;
 }
 
 .filter-btn{
@@ -67,7 +73,7 @@ header .navbar ul li a:hover{
   border-top: 100px;
   padding: 10px 30px;
   cursor: pointer;
-  margin-top: 50px;
+  margin-top: 10px;
   margin-left: 50%;
   margin-right: 50%;
   background: linear-gradient(to right,#97d5e7,#69d372);

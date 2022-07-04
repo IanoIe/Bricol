@@ -20,7 +20,7 @@ router.get('/:id', function (req, res, next){
 });
 
 router.post('/guardar/:id', function(req, res, next){
-    var data = [req.body.mensagem, new Date(), req.body.idUtilizador,  req.params.id]
+    var data = [req.body.mensagem, new Date(), req.params.id, req.body.idUtilizador, req.body.idAnuncio]
     envMenModels.guardarMensagem(data, function(status, result){
         if(result.code==200){
             res.send(result);

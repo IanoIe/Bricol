@@ -1,4 +1,4 @@
-use bricol;
+use Bricol;
 
 insert into Utilizador(idUtilizador, Nome, Username, Email, Password) values (1, "Luis Mendes", "Mendes", "mendes@gmail.com", "mendes");
 insert into Utilizador(idUtilizador, Nome, Username, Email, Password) values (2, "Maria Gomes", "Maria", "maria@hotmail.com", "maria");
@@ -9,13 +9,13 @@ insert into Utilizador(idUtilizador, Nome, Username, Email, Password) values (6,
 insert into Utilizador(idUtilizador, Nome, Username, Email, Password) values (7, "Fabio Costa", "Fabio", "fabio@gmail.com", "fabio");
 
 
-insert into Localizacao(idLocalizacao, Longitude, Latitude) values (1, "-8.854980468750002", "38.831149809348744");
-insert into Localizacao(idLocalizacao, Longitude, Latitude) values (2, "-9.140625000000002", "38.69408504756833");
-insert into Localizacao(idLocalizacao, Longitude, Latitude) values (3, "-9.129638671875002","38.59970036588819");
-insert into Localizacao(idLocalizacao, Longitude, Latitude) values (4, "-8.964843750000002","38.676933444637925");
-insert into Localizacao(idLocalizacao, Longitude, Latitude) values (5,"-9.184570312500002","38.60828592850559");
-insert into Localizacao(idLocalizacao, Longitude, Latitude) values (6,"-9.999999999999990","38.70823492850559");
-insert into Localizacao(idLocalizacao, Longitude, Latitude) values (7,"-9.780540312500002","38.60820332850559");
+insert into Localizacao(idLocalizacao, Coordenadas) values (1, POINT(38.831149809348744, -8.854980468750002));
+insert into Localizacao(idLocalizacao, Coordenadas) values (2, POINT(38.69408504756833, -9.140625000000002));
+insert into Localizacao(idLocalizacao, Coordenadas) values (3, POINT(38.59970036588819, -9.129638671875002));
+insert into Localizacao(idLocalizacao, Coordenadas) values (4, POINT(38.676933444637925, -8.964843750000002));
+insert into Localizacao(idLocalizacao, Coordenadas) values (5, POINT(38.60828592850559, -9.184570312500002));
+insert into Localizacao(idLocalizacao, Coordenadas) values (6, POINT(38.70823492850559, -9.999999999999990));
+insert into Localizacao(idLocalizacao, Coordenadas) values (7, POINT(38.60820332850559, -9.780540312500002));
 
 
 insert into Anuncio(idAnuncio, Titulo, Descricao, DatAnuncio, Localizacao_idLocalizacao, Utilizador_idUtilizador) values (1, "Cafe-Bar", "Limpar bem o bar", "2021-02-02", 1, 1);
@@ -36,10 +36,9 @@ insert into Imagens(idImagens, Url, DatImagem, Anuncio_idAnuncio) values (6, "ht
 insert into Imagens(idImagens, Url, DatImagem, Anuncio_idAnuncio) values (7, "https://i1.wp.com/vozdabarra.com/wp-content/uploads/2021/09/1632324475_Criancas-sao-restadas-em-situacao-de-maus-tratos-em-casa-suja.jpeg?fit=800%2C600&ssl=1", "2021-06-30", 7);
 
 
-insert into Mensagens(idMensagens, Mensagem,  dataCriacao, Utilizador_idUtilizador, Anuncio_idAnuncio) values (1, "Pretendo fazer este serviço que você publicou", "2021-03-02", 2, 1);
-insert into Mensagens(idMensagens, Mensagem,  dataCriacao, Utilizador_idUtilizador, Anuncio_idAnuncio) values (2, "Quanto custa este serviço? Sou profisiional na area", "2021-06-06", 1, 2);
-insert into Mensagens(idMensagens, Mensagem,  dataCriacao, Utilizador_idUtilizador, Anuncio_idAnuncio) values (3, "Quanto custa? Sou profisiional na area", "2021-06-06", 4, 3);
-insert into Mensagens(idMensagens, Mensagem, dataCriacao, Utilizador_idUtilizador, Anuncio_idAnuncio) values (4, "Somos cinco pessoas e gostariamos de ter mais inforção sobre limpeza deste local", "2021-07-08", 5, 4);
-insert into Mensagens(idMensagens, Mensagem, dataCriacao, Utilizador_idUtilizador, Anuncio_idAnuncio) values (5, "Boa tare, diz-me quando podemos ir começar limpar o local vip", "2021-09-20", 3, 5); 
-insert into Mensagens(idMensagens, Mensagem,  dataCriacao, Utilizador_idUtilizador, Anuncio_idAnuncio) values (6, "Pretendo fazer este serviço mas fica-me muito longe", "2021-03-02", 4, 1);
-insert into Mensagens(idMensagens, Mensagem,  dataCriacao, Utilizador_idUtilizador, Anuncio_idAnuncio) values (7, "Trabalhe para me se faz favor", "2021-09-02", 4, 6);
+insert into Mensagens(idMensagens, Mensagem,  dataCriacao, Remetente_idUtilizador, Utilizador_idUtilizador, Anuncio_idAnuncio) values (1, "Pretendo fazer este serviço que você publicou", "2021-03-02", 2, 2, 1);
+insert into Mensagens(idMensagens, Mensagem,  dataCriacao, Remetente_idUtilizador, Utilizador_idUtilizador, Anuncio_idAnuncio) values (2, "Quanto custa este serviço? Sou profisiional na area", "2021-06-06", 1, 1, 2);
+insert into Mensagens(idMensagens, Mensagem,  dataCriacao, Remetente_idUtilizador, Utilizador_idUtilizador, Anuncio_idAnuncio) values (3, "Quanto custa? Sou profisiional na area", "2021-06-06", 4, 4, 3);
+insert into Mensagens(idMensagens, Mensagem, dataCriacao, Remetente_idUtilizador, Utilizador_idUtilizador, Anuncio_idAnuncio) values (4, "Somos cinco pessoas e gostariamos de ter mais inforção sobre limpeza deste local", "2021-07-08", 5, 5, 4);
+insert into Mensagens(idMensagens, Mensagem, dataCriacao, Remetente_idUtilizador, Utilizador_idUtilizador, Anuncio_idAnuncio) values (5, "Boa tare, diz-me quando podemos ir começar limpar o local vip", "2021-09-20", 3, 3, 5); 
+insert into Mensagens(idMensagens, Mensagem,  dataCriacao, Remetente_idUtilizador, Utilizador_idUtilizador, Anuncio_idAnuncio) values (6, "Pretendo fazer este serviço mas fica-me muito longe", "2021-03-02", 4, 4, 1);

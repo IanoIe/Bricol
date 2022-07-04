@@ -68,7 +68,7 @@ module.exports.uploadLocalizacao = function (data, callback){
             conn.release();
             next(err);
         }
-        else conn.query('INSERT INTO Localizacao(Longitude, Latitude) values(?,?)', [data.Longitude, data.Latitude], function (err, rows){
+        else conn.query('INSERT INTO Localizacao (Coordenadas) VALUES (POINT(?,?))', [data.Longitude, data.Latitude], function (err, rows){
             conn.release();
 
             if (err) {

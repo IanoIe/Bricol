@@ -154,7 +154,7 @@ ul li .content .meta a:hover {
 /*Modal*/
 .modal-window {
   position: fixed;
-  background-color: rgba(255, 255, 255, 0.25);
+  background-color: rgba(0, 0, 0, 0.5);
   top: 0;
   right: 0;
   bottom: 0;
@@ -227,3 +227,33 @@ footer{
     width: 100%;
     text-align: center;
   }
+
+
+.chat li{
+  background-color: white !important;
+}
+
+.chat .destinatario {
+  width: 75%;
+  text-align: left;
+  /* background-color: burlywood !important; */
+}
+
+.chat .remetente {
+  width: 75%;
+  text-align: right;
+  margin-left: auto;
+  /* background-color: aquamarine !important; */
+}
+
+.chat .destinatario div {
+  background-color: burlywood !important;
+  padding: 6px;
+  border-radius: 4px;
+}
+
+.chat .remetente div {
+  background-color: aquamarine !important;
+  padding: 6px;
+  border-radius: 4px; 
+}

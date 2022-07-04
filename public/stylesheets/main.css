@@ -56,16 +56,32 @@ header .navbar ul li a:hover{
   color:var(--green);
 }
 
+main {
+  position: fixed;
+  margin-top: 115px;
+  padding: 0;
+  left: 0px;
+}
 
 #map{
   position: fixed;
-  margin-top: 100px;
   padding: 0;
   left: 0px;
   height: 100%;
   width: 100%;
 }
 
+#searchBar {
+  align-self: center;
+  display: flex;
+  margin: 5px auto;
+  padding: 0 10px;
+}
+
+#searchBar label,
+#searchBar button {
+  margin-left: 10px;
+}
 
 footer{
     padding: 10px;

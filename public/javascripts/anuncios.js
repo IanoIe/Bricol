@@ -9,7 +9,7 @@ function carregarAnuncios() {
     idUtilizador = localStorage.getItem("idUtilizador")
  
     $.ajax({
-        url: url + idUtilizador,
+        url: url,
         method: 'get',
         success: function (resultado) {
             anunciosInf = resultado.data;

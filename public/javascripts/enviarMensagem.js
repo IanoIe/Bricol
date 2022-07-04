@@ -31,13 +31,13 @@ function submeter(){
     var mensagem = document.getElementById("mensagem").value;
     console.log("mensagem: "+ mensagem)
     url = '/api/envMeng/guardar/'
-    idAnuncio = localStorage.getItem("idAnuncio")
     $.ajax({
         url: url + idAnuncio,
         method: 'post',
         data:{
             mensagem: mensagem,
-            idUtilizador: localStorage.getItem("idUtilizador") 
+            idUtilizador: localStorage.getItem("idUtilizador"),
+            idAnuncio: localStorage.getItem("idAnuncio")
         },
         success: function (resultado) {
             if(resultado.code==200){
