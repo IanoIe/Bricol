@@ -8,6 +8,7 @@ var marker;
 
 var anunciosInf;
 
+/**Função que permite mostrar os meus anuncios */
 function carregarMyAnuncios() {
   url = "/api/myAnuncio/";
   idUtilizador = localStorage.getItem("idUtilizador");
@@ -48,7 +49,6 @@ function carregarMyAnuncios() {
         containerAnuncio.appendChild(containerDescricao);
         container.appendChild(containerAnuncio);
       }
-      //MyAnuncios.innerHTML = anun
       MyAnuncios.appendChild(container);
     },
   });
@@ -138,7 +138,7 @@ function uploadAnuncio(idUtilizador, url) {
   });
 }
 
-/*Apagar Anuncio*/
+/*Função que permite apagar Anuncio*/
 function removerAnuncio(id) {
   console.log(id);
   $.ajax({

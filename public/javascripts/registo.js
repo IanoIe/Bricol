@@ -1,4 +1,4 @@
-/**Registar utilizador */
+/**Função para registar utilizador */
 function registar(){
     $.ajax({
         url: '/api/auth/register',

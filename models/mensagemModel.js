@@ -1,5 +1,6 @@
 var mysql = require('./connection').pool;
 
+
 module.exports.getConversas = function (id, callback, next) {
     mysql.getConnection(function (err, conn){
         if (err) {
@@ -22,6 +23,7 @@ module.exports.getConversas = function (id, callback, next) {
         })
     })
 }
+
 
 module.exports.getMensagens = function (idUtilizador, idAnuncio, callback, next) {
     mysql.getConnection(function (err, conn){

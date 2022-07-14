@@ -14,6 +14,7 @@ function carregarMapa(idElement) {
   osm.addTo(map);
 }
 
+/**Função que permitir mostrar localização atual e mostrar no mapa */
 function localizacaoAtual() {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function (position) {
@@ -64,6 +65,7 @@ function carregarAnunciosMapa(mapa, latLng, distMax) {
   });
 }
 
+/**Função para adicionar anuncio no mapa atraves das coordenadas (latitude, longitude) */
 function adicionarAnuncioMapa(mapa, anuncio, latlng) {
   console.log(anuncio);
   var marker = L.marker(anuncio.locAnuncio)
@@ -105,11 +107,13 @@ function adicionarAnuncioMapa(mapa, anuncio, latlng) {
   );
 }
 
+/**Função para abrir um anuncio no mapa para enviar uma mensagem  */
 function abrirAnuncio(id) {
   localStorage.setItem("idAnuncio", parseInt(id));
   window.location = "enviarMensagem.html";
 }
 
+/**Função que permite determinar a localização atraves da barra de pesquisa e mostra na tela*/
 async function geolocalizacao(event) {
   var localizacao = event.target.value;
 
@@ -133,6 +137,7 @@ async function geolocalizacao(event) {
   }
 }
 
+/** Função ao clicar no botão mostra localização selecionado*/
 function selecionarLocalizacao(longitude, latitude) {
   if (map) {
     map.remove();

@@ -1,5 +1,5 @@
 
-
+/**Função que mostra mensagens da conversas, nome de utilizador com que conversa  */
 function carregarMensagens() {
     url = '/api/mensagem/conversas/utilizador/'
     idUtilizador = localStorage.getItem("idUtilizador")
@@ -23,6 +23,7 @@ function carregarMensagens() {
     })   
 }
 
+/**Função que abrir a janela de conversa mantendo utilizadorID, anuncioID (chat) */
 function abrirModal(Utilizador_idUtilizador, idAnuncio){
     window.location = "#open-modal"
     localStorage.setItem("Utilizador_idUtilizador", Utilizador_idUtilizador);
@@ -32,6 +33,7 @@ function abrirModal(Utilizador_idUtilizador, idAnuncio){
     obterMensagens(Utilizador_idUtilizador, idAnuncio);   
 }
 
+/** Função para submter a conversa (chat) */
 function submeter(){
     let mensagem = document.getElementById("mensagemSubmeter").value;
     let url = '/api/envMeng/guardar/'
@@ -54,6 +56,8 @@ function submeter(){
     })
 }
 
+
+/** Função para obter mensagens do rementente e destinatario (no chat)*/
 function obterMensagens(Utilizador_idUtilizador, idAnuncio) {
     $.ajax({
         url: '/api/mensagem/utilizador/'+Utilizador_idUtilizador+'/anuncio/'+idAnuncio,

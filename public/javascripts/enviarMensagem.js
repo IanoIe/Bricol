@@ -27,6 +27,7 @@ function carregarUmAnuncio() {
     })   
 }
 
+/**Função para submeter as mensagens na pagina principal (idUtilizador, e idAnuncio)*/
 function submeter(){
     var mensagem = document.getElementById("mensagem").value;
     console.log("mensagem: "+ mensagem)
