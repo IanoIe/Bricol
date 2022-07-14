@@ -4,7 +4,8 @@ var fotos
 
 var enviMensgInf
 
-function carregarUmAnuncio() {
+/**Função que permite o utilizador enviar mensagem apartir do anuncio mostrado no mapa */
+function comentarAnuncioMapa() {
     url = '/api/envMeng/'
     idAnuncio = localStorage.getItem("idAnuncio")
     console.log(idAnuncio)

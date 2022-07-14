@@ -167,7 +167,7 @@ function removerAnuncio(id) {
   });
 }
 
-/** Função carregar o mapa */
+/** Função carregar o mapa na pagina MyAnuncio*/
 function carregarMapa(idElement) {
   map = L.map("map").setView([38.7015863, -9.1566962], 8);
   // osm layer

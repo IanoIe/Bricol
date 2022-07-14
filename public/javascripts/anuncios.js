@@ -1,9 +1,5 @@
-const { format } = require("express/lib/response");
 
-var fotos
-
-var anunciosInf
-
+/**Função que permite mostrar todos anúncios */
 function carregarAnuncios() {
     url = '/api/anuncio/'
     idUtilizador = localStorage.getItem("idUtilizador")
