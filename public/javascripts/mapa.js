@@ -113,7 +113,7 @@ function abrirAnuncio(id) {
   window.location = "enviarMensagem.html";
 }
 
-/**Função que permite determinar a localização atraves da barra de pesquisa e mostra na tela*/
+/**Função que permite pesquisar a localização atraves da barra de pesquisa e mostra na tela*/
 async function geolocalizacao(event) {
   var localizacao = event.target.value;
 

@@ -28,7 +28,7 @@ function abrirModal(Utilizador_idUtilizador, idAnuncio){
     window.location = "#open-modal"
     localStorage.setItem("Utilizador_idUtilizador", Utilizador_idUtilizador);
     localStorage.setItem("idAnuncio", idAnuncio);
-    let idUtilizador = localStorage.getItem("idUtilizador");
+    //let idUtilizador = localStorage.getItem("idUtilizador");
 
     obterMensagens(Utilizador_idUtilizador, idAnuncio);   
 }
