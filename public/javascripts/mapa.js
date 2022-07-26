@@ -113,7 +113,9 @@ function abrirAnuncio(id) {
   window.location = "enviarMensagem.html";
 }
 
-/**Função que permite pesquisar a localização atraves da barra de pesquisa e mostra na tela*/
+/**Função que permite pesquisar a localização atraves da barra de pesquisa e mostra na tela
+ * Recebe a string do utilizador e vai sugerindo e quando clicando da as coords e nome da zona de localização
+*/
 async function geolocalizacao(event) {
   var localizacao = event.target.value;
 

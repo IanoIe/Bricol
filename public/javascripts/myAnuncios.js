@@ -176,7 +176,7 @@ function carregarMapa(idElement) {
       '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
   });
   osm.addTo(map);
-
+/*ao clicar no mapa da pagina MyAnuncio, o click remover a bola azul e coloca outro*/
   map.on("click", function (e) {
     if (marker) {
       marker.remove();
